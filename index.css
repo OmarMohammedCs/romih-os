@@ -1,0 +1,66 @@
+/* إضافات للتصميم المتجاوب */
+@layer utilities {
+  /* شاشات صغيرة جداً */
+  @media (max-width: 480px) {
+    .xs\:hidden {
+      display: none;
+    }
+    .xs\:inline {
+      display: inline;
+    }
+  }
+  
+  /* شاشات متوسطة */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .sm\:hidden {
+      display: none;
+    }
+    .sm\:inline {
+      display: inline;
+    }
+  }
+  
+  /* شاشات تابلت */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .md\:hidden {
+      display: none;
+    }
+    .md\:inline {
+      display: inline;
+    }
+  }
+  
+  /* شاشات كبيرة */
+  @media (min-width: 1025px) {
+    .lg\:hidden {
+      display: none;
+    }
+    .lg\:inline {
+      display: inline;
+    }
+  }
+}
+
+/* تحسينات للأجهزة اللمسية */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:brown-glow:hover {
+    box-shadow: none;
+  }
+  
+  button, 
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* منع التحديد على الأجهزة المحمولة */
+@media (max-width: 768px) {
+  .no-select-mobile {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}
+
+
